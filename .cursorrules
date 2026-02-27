@@ -1,0 +1,19 @@
+# AI-utvikler Regler for Helse Sør-Øst Portalen
+
+1. **Design & Stil**:
+   - Bruk alltid HSØ sin profil: Blå (`#0056a4`), god kontrast, rene flater, og profesjonelle farger.
+   - Bruk Tailwind CSS for all styling.
+   - Hold koden responsiv for mobil, nettbrett og desktop.
+
+2. **Arkitektur & Data**:
+   - Én modul = Nøyaktig ett objekt i `mockData.json`.
+   - Læringsinnholdet skal ALLTID ligge i data-mappen (`mockData.json`), ALDRI hardkodes direkte i React-komponentene.
+
+3. **Tilgjengelighet (WCAG AA)**:
+   - Hold kontrastene høye.
+   - Sørg for at applikasjonen er navigerbar via tastatur (`Tab`, `Enter`).
+   - Bruk semantisk HTML og sett `aria-labels` på interaktive og visuelle knapper/ikoner.
+
+4. **Koding**:
+   - Skriv kode i React/Vite miljø.
+   - Svar med komplette løsninger der det trengs, men unngå unødvendig kompleksitet.

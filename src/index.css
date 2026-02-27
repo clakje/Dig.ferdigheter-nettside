@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hso-blue: #0056a4;
+  --color-hso-light: #e6f0f9;
+  --color-hso-gray: #f4f4f4;
+  --color-hso-dark: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Open Sans", sans-serif;
+  background-color: var(--color-hso-gray);
+  color: var(--color-hso-dark);
+}

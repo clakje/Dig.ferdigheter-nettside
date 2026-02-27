@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Logg på med et smil (Ansiktsgjenkjenning)",
+    "shortDescription": "Lei av å skrive passordet feil tre ganger før du i det hele tatt har startet arbeidsdagen? Bruk ansiktet ditt i stedet!",
+    "fullContent": "Slik gjør du det:\n\nTrykk på Start-knappen [Ikon: WindowsLogo] og skriv \"pålogging\".\n\nVelg Påloggingsalternativer [Ikon: Key].\n\nKlikk på Ansiktsgjenkjenning (Windows Hello) og velg Konfigurer.\n\nFølg instruksjonene på skjermen og se rett inn i kameraet.\n\nFor å logge av: Klikk Start [Ikon: WindowsLogo], profilikonet ditt [Ikon: User] og Logg av. Neste gang du skal inn igjen, trenger du bare å se på skjermen!\n\nPassord er så 2015. Nå er du din egen nøkkel.",
+    "keywords": [
+      "ansiktsgjenkjenning"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "2",
+    "title": "Lynrask tilgang til yndlingsverktøyene dine",
+    "shortDescription": "Hvorfor bruke tid på å lete frem det du bruker hver dag, når du kan lime det fast akkurat der du trenger det?",
+    "fullContent": "Slik gjør du det:\n\nFeste program på oppgavelinjen i bunn: Trykk Start-knappen [Ikon: WindowsLogo], søk opp f.eks. \"Word\", høyreklikk på det og velg Fest til oppgavelinje [Ikon: Pin].\n\nLag snarvei til en nettside: Gå til nettsiden og trykk Ctrl + D.\n\nPass på at Bokmerkelinje er valgt som mappe, og klikk Ferdig.\n\nSer du ikke bokmerkelinjen din øverst i nettleseren? Trykk Ctrl + Shift + B for å trylle den frem.\n\nTre klikk spart er tre klikk tjent!",
+    "keywords": [
+      "feste-på-oppgavelinjen"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "3",
+    "title": "Få kontroll på skjerm 1 og 2",
+    "shortDescription": "Musen din forsvinner ut av skjermen og dukker opp på feil side? Du er ikke alene, det er bare PC-en din som er forvirret.",
+    "fullContent": "Slik gjør du det:\n\nTrykk på Start-knappen [Ikon: WindowsLogo] og skriv \"skjerm\".\n\nVelg Endre skjerminnstillinger [Ikon: Settings].\n\nKlikk på knappen Identifiser for å se hvem som er hvem av skjerm 1 og 2.\n\nDra og slipp firkantene på skjermen din slik at de står i samme rekkefølge som de fysiske skjermene på pulten din.\n\nKlikk Bruk.\n\nGratulerer, musen din vet endelig forskjell på høyre og venstre!",
+    "keywords": [
+      "få-kontroll-på-skjermene"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "4",
+    "title": "Lynrask låsing av PC-en",
+    "shortDescription": "Går du fra maskinen åpen, kan jo hvem som helst sende en fellesmail om at du spanderer kake i kantinen. La oss unngå det.",
+    "fullContent": "Slik gjør du det:\n\nFinn Windows-tasten [Ikon: WindowsLogo] (den med fire ruter nede til venstre på tastaturet).\n\nHold den inne, og trykk samtidig på bokstaven L (for \"Lock\").\n\nVips! Maskinen er nå låst, skjermen blir mørk, og du kan trygt forlate pulten.\n\nKakebudsjettet ditt er herved reddet!",
+    "keywords": [
+      "låse-pc"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "5",
+    "title": "Hold orden på nettleserfanene dine",
+    "shortDescription": "Har du så mange faner åpne at du ikke lenger ser hva de heter? Det er et kjent syndrom, men heldigvis lett å kurere.",
+    "fullContent": "Slik gjør du det:\n\nFor å åpne en ny fane: Trykk på + (pluss-tegnet) helt øverst ved siden av fanene dine [Ikon: Add].\n\nFor å bytte raskt mellom faner uten mus: Trykk Ctrl + Tab på tastaturet.\n\nHar du en fane du bruker hele tiden? Høyreklikk på den og velg Fest fane [Ikon: Pin]. Den krymper og låses helt til venstre.\n\nFor å lukke en fane i lynfart: Trykk Ctrl + W.\n\nRyddig nettleser, ryddig sinn.",
+    "keywords": [
+      "orden-på-faner"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "6",
+    "title": "Finne nåla i høystakken (og redde tapte faner)",
+    "shortDescription": "Har du noen gang lukket feil fane i panikk, eller lett desperat etter ett bestemt ord på en endeløs nettside? Pust med magen.",
+    "fullContent": "Slik gjør du det:\n\nFor å søke i teksten: Trykk Ctrl + F samtidig.\n\nSkriv inn ordet du leter etter i søkefeltet [Ikon: Search] som dukker opp, og trykk Enter for å hoppe til neste treff.\n\nFor å angre lukking av fane: Trykk Ctrl + Shift + T samtidig.\n\nGjenta trinn 3 hvis du vil trylle tilbake enda flere faner du nylig lukket.\n\nHverdagsmagi på sitt aller beste.",
+    "keywords": [
+      "redde-tapte-faner"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "7",
+    "title": "Restarte eller logge av? Det er spørsmålet!",
+    "shortDescription": "Å skru av og på løser 99 % av alle IT-problemer, men av og til holder det med en liten blund fremfor full dyp søvn.",
+    "fullContent": "Slik gjør du det:\n\nTrykk på Start-knappen [Ikon: WindowsLogo].\n\nFor å oppdatere passord, profil og tilganger raskt: Klikk på navnet eller bildet ditt [Ikon: User] og velg Logg av.\n\nFor å friske opp hele maskinen: Klikk på På/av-knappen [Ikon: PowerButton] nede i hjørnet og velg Start på nytt.\n\nTommelfingerregel: Bruk Start på nytt hvis PC-en er treg eller har hengt seg opp.\n\nTenk på avlogging som en kaffepause, og restart som en god natts søvn.",
+    "keywords": [
+      "restarte-eller-logge-av"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "8",
+    "title": "Sjongler vinduer som en proff",
+    "shortDescription": "Prøver du å lese fra ett dokument mens du skriver i et annet, og ender opp med å klikke deg halvt i hjel? Vi fikser det.",
+    "fullContent": "Slik gjør du det:\n\nHold Windows-tasten [Ikon: WindowsLogo] nede på tastaturet.\n\nTrykk på Pil venstre eller Pil høyre for å dytte vinduet du jobber i til den ene siden av skjermen.\n\nSlipp tastene. PC-en spør deg nå hvilket av de andre åpne vinduene du vil fylle den andre halvdelen med.\n\nKlikk på vinduet du vil ha opp. Begge vinduene står nå perfekt side om side!\n\nMultitasking har aldri sett ryddigere ut.",
+    "keywords": [
+      "sjongler-vinduer"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "9",
+    "title": "Større tekst i nettleseren på 1-2-3",
+    "shortDescription": "Mysing gir unødvendige rynker, og uansett er det skjermen som er for liten, ikke synet ditt det er noe galt med.",
+    "fullContent": "Slik gjør du det:\n\nHold nede Ctrl-tasten på tastaturet.\n\nRull hjulet på musen fremover/oppover for å gjøre alt større (zoome inn).\n\nRull hjulet bakover/nedover for å zoome ut igjen.\n\nBonus: Trykk Ctrl og tallet 0 (null) samtidig for å hoppe rett tilbake til standard størrelse.\n\nSe der, ja! Nå slipper du å sitte med nesa klistret i skjermen.",
+    "keywords": [
+      "større-tekst-i-nettleseren"
+    ],
+    "icon": "BookOpen"
+  },
+  {
+    "id": "10",
+    "title": "Gjør PC-en lettere å lese og se",
+    "shortDescription": "Leter du etter musepekeren mer enn du faktisk jobber? Det er lov å be PC-en om å snakke litt høyere og tydeligere.",
+    "fullContent": "Slik gjør du det:\n\nTrykk på Start-knappen [Ikon: WindowsLogo] og skriv \"tilgjengelighet\".\n\nVelg Innstillinger for tilgjengelighet [Ikon: EaseOfAccess].\n\nVelg Tekststørrelse og dra i glidebryteren for å gjøre bokstavene større på tvers av hele PC-en.\n\nGå tilbake og velg Musepeker og berøring for å gjøre pekeren diger, eller gi den en gøyal farge.\n\nGå til Kontrasttemaer hvis du vil ha mørk bakgrunn med lyse bokstaver.\n\nNå kan du endelig finne pekeren din igjen, selv før morgenkaffen.",
+    "keywords": [
+      "øke-størrelse"
+    ],
+    "icon": "BookOpen"
+  }
+]

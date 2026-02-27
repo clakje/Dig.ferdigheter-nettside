@@ -1,0 +1,188 @@
+
+Innhold
+
+
+
+Før du skriver en eneste linje kode, må du forstå din nye rolle. Dette er det viktigste kapittelet i hele oppskriften, fordi det som skiller de som lykkes med AI-assistert programmering fra de som gir opp, er nettopp dette mentale skiftet.
+▸  Du er ikke en koder — du er en systemarkitekt
+Tradisjonell programmering handlet om å huske syntaks og skrive kode linje for linje. Det er ikke din jobb lenger. Din jobb er å:
+Definere hva som skal bygges — med presisjon og klarhet
+Vurdere kvaliteten — på det AI-en produserer
+Styre retningen — når prosjektet drifter av kurs
+Koble biter sammen — til et helhetlig produkt
+
+
+▸  Forstå Claude sine begrensninger
+Claude har et "context window" — en begrensning på hvor mye den kan huske i én samtale. Når prosjektet vokser, vil Claude begynne å glemme det som ble sagt tidlig i samtalen. Dette er den viktigste tekniske begrensningen du må designe rundt.
+
+
+▸  Kvalitetskontroll er din superkraft
+Selv om du er nybegynner, kan du stille gode spørsmål. Etter at Claude har skrevet kode, still alltid disse:
+"Hva er svakhetene ved denne løsningen?"
+"Hva skjer hvis brukeren gjør noe uventet?"
+"Fins det en enklere løsning?"
+"Er dette den beste tilnærmingen for et prosjekt som skal skalere?"
+
+
+
+En konsistent mappestruktur på tvers av alle prosjektene dine gir deg to store fordeler: Claude vil alltid vite hvor ting hører hjemme, og du vil raskt kunne orientere deg i et prosjekt du ikke har sett på på to uker.
+▸  Universell prosjektstruktur
+Bruk denne strukturen som utgangspunkt for alle prosjektene dine, uavhengig av teknologi:
+
+
+
+▸  Sett opp strukturen med Claude
+Åpne Antigravity og bruk denne prompten for å sette opp strukturen:
+
+
+
+Disse tre filene er selve fundamentet for at Claude skal kunne jobbe effektivt med prosjektet ditt over tid. De er viktigere enn selve koden i startfasen.
+▸  README.md — Prosjektets grunnlov
+Dette er den første filen du oppretter. Claude skal alltid lese denne. Den fungerer som en kontrakt mellom deg og AI-en.
+
+
+
+▸  CONTEXT.md — Løsningen på glemsk-problemet
+Dette er et levende dokument du oppdaterer etter HVER arbeidsøkt. Det er ikke en statisk mal du limer inn — det er prosjektets sanntidsstatus. Når du starter en ny økt, limer du inn innholdet slik det ser ut akkurat nå.
+
+
+
+▸  .cursorrules — De faste reglene Claude alltid følger
+Denne filen leses automatisk av Antigravity og gis til Claude som instruksjoner. Tilpass den til dine behov:
+
+
+
+Git er ikke bare en backup — det er din trygghet. Som nybegynner vil du regelmessig bryte ting som fungerte. Med Git er det aldri et problem, fordi du alltid kan hoppe tilbake.
+▸  Sett Git-identitet FØRST (må gjøres én gang)
+Før din aller første commit må du fortelle Git hvem du er. Dette gjøres kun én gang per datamaskin:
+
+
+
+▸  De viktigste Git-kommandoene
+
+
+▸  Branching — Aldri jobbe direkte på main
+Tenk på main-branchen som produksjonsversjonen — den som alltid skal virke. All utvikling skjer i egne grener (branches). Dette er en profesjonell vane du bør innarbeide fra dag én.
+
+
+
+▸  GitHub — Backup i skyen og deling
+Git alene lagrer kun lokalt på din PC. Hvis PC-en krasjer eller blir stjålet, mister du alt. GitHub er din sky-backup og gjør det også enkelt å dele prosjekter med andre eller jobbe fra flere maskiner.
+
+Oppsett av GitHub (gjøres én gang per prosjekt)
+Gå til github.com og opprett en ny repository (velg 'Private' hvis prosjektet ikke skal være offentlig)
+Kopier URL-en GitHub gir deg (ser ut som: https://github.com/brukernavn/prosjektnavn.git)
+I terminalen, inne i prosjektmappen din, kjør disse kommandoene:
+
+
+Daglig workflow med GitHub
+Etter at oppsettet er gjort, skal du pushe til GitHub etter hver vellykket commit-serie (f.eks. ved slutten av hver arbeidsøkt):
+
+
+
+▸  Gode commit-meldinger
+En commit-melding skal beskrive hva som ble gjort og hvorfor, ikke bare "endringer".
+
+
+
+Dette er den daglige arbeidsflyten du skal følge for hvert nye steg i et prosjekt. Hvert steg er designet for å sikre at du faktisk lærer mens Claude skriver koden, og at ingenting blir ødelagt underveis.
+
+
+
+
+Kvaliteten på svarene Claude gir deg er direkte proporsjonal med kvaliteten på det du spør om. Her er de viktigste prinsippene og de ferdige promptene du kan bruke.
+▸  Promptens fire bestanddeler
+
+
+▸  Master-prompten for nye funksjoner
+Kopier og tilpass denne prompten når du starter arbeid på noe nytt:
+
+
+▸  Anti-hallusinasjonsprompt
+Bruk denne hvis du mistenker at Claude finner på noe som ikke stemmer:
+
+
+▸  Pedagogisk forklaringsprompt
+Bruk denne for å faktisk lære av koden Claude skriver:
+
+
+
+
+Siden du utelukkende jobber innen digital læring og kompetanseheving, er det noen prinsipper og mønstre du bør be Claude implementere fra dag én i alle prosjekter.
+▸  Prinsipp 1: Modularitet — én modul = én fil
+Hvert læringstema, kurs eller modul bør være en selvstendig fil. Det gjør det trivielt enkelt å legge til nytt innhold uten å røre eksisterende kode.
+
+▸  Prinsipp 2: Dataseparasjon — innhold og kode er aldri blandet
+Læringsinnholdet (spørsmål, tekster, videolenker) skal alltid ligge i /data-mappen som JSON-filer, aldri hardkodet i selve koden.
+
+
+▸  Prinsipp 3: Loggføring av brukeradferd
+For å dokumentere og bevise kompetanseheving, be Claude om å bygge inn logging fra starten:
+Hvilke moduler har brukeren fullført?
+Hva er score per quiz-forsøk?
+Hvor lang tid brukte de?
+Hvilke spørsmål svarte de feil på?
+
+▸  Prinsipp 4: Universell utforming (WCAG 2.1 AA)
+Hvis du bygger noe med et brukergrensesnitt, inkluder alltid denne setningen i promptene dine:
+
+
+
+
+Testing høres avansert ut, men i praksis handler det bare om å automatisere spørsmålet: Fungerer dette fortsatt? La Claude skrive testene for deg — men forstå hva de sjekker.
+▸  Hva er en test egentlig?
+En test er rett og slett et lite program som sjekker at koden din oppfører seg som forventet. Tenk på det som en sjekkliste som kjøres automatisk. Etter at Claude har gjort store endringer, kjører du testene — og ser umiddelbart om noe er ødelagt.
+
+
+▸  Be Claude skrive testene for deg
+
+
+▸  Kjøre testene
+
+
+
+Siden du planlegger å bygge mange forskjellige produkter innen digital læring, trenger du en strategi for å ikke starte fra null hver gang. Løsningen er et template-repo.
+▸  Hva er et template-repo?
+Et template-repo er et ferdig satt opp prosjekt som inneholder all strukturen du trenger, men ingen prosjektspesifikk kode. Det er din personlige prosjektfabrikk — kopier det til et nytt prosjekt på sekunder.
+
+
+▸  Slik kopierer du templaten
+
+▸  Oppgrader templaten over tid
+Etter hvert som du lærer hva som fungerer og ikke fungerer, oppdater templaten. Legg til nye regler i .cursorrules, forbedre README.md-malen, og legg til nye prompts i ressursmappen. Templaten skal bli bedre for hvert prosjekt du fullfører.
+
+
+
+Bruk denne sjekklisten hver gang du starter et nytt prosjekt. Skriv den gjerne ut og ha den fysisk tilgjengelig.
+
+▸  Fase 1: Før du åpner Antigravity
+☐  Jeg kan forklare hva produktet løser i én setning
+☐  Jeg vet hvem brukeren er og hva de skal lære
+☐  Jeg har bestemt hva som er MVP (minimum viable product)
+☐  Jeg har bestemt hva som ikke er med i versjon 1
+
+▸  Fase 2: Prosjektoppsett
+☐  Kopiert template og opprettet ny prosjektmappe
+☐  Satt Git-identitet: git config --global user.name "[Ditt navn]" og git config --global user.email "[din@epost.com]"
+☐  Kjørt git init og gjort første commit
+☐  Opprettet repository på GitHub og koblet til med git remote add origin
+☐  Pushet første commit til GitHub med git push -u origin main
+☐  Skrevet README.md med formål, brukerhistorier og ikke-liste
+☐  Tilpasset .cursorrules til dette prosjektet
+☐  Opprettet start-CONTEXT.md
+
+▸  Fase 3: Første arbeidsøkt
+☐  Limt inn CONTEXT.md i Claude og fått bekreftelse på forståelse
+☐  Bedt Claude skissere arkitekturen i tekst (ikke kode)
+☐  Godkjent arkitekturen før kodeskriving startet
+☐  Jobbet på én funksjon om gangen
+☐  Committed etter første fungerende funksjon
+
+▸  Fase 4: Løpende kvalitetssikring
+☐  Tester er skrevet for alle kjernefunksjoner
+☐  Læringsinnhold ligger i /data, ikke i koden
+☐  Alle commits har beskrivende meldinger
+☐  Pushet til GitHub ved slutten av hver økt (git push)
+☐  CONTEXT.md er oppdatert etter hver økt
+☐  De beste promptene er loggført i docs/prompt_log.md
+
