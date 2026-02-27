@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
     ArrowLeft, BookOpen, LayoutGrid, Key, User,
-    Pin, Settings, Plus, Search, Power, Accessibility
+    Pin, Settings, Plus, Search, Power, Accessibility, Heart
 } from 'lucide-react';
 import mockData from '../data/mockData.json';
 
@@ -37,17 +38,25 @@ const renderContentWithIcons = (text) => {
     });
 };
 
-const ModuleDetailPage = () => {
+const ModuleDetailPage = ({ bookmarks, toggleBookmark }) => {
     const { id } = useParams();
     const navigate = useNavigate();
 
     // Find the current module
     const module = mockData.find(m => m.id === id);
+    const isBookmarked = bookmarks?.includes(module?.id);
 
-    // Scroll to top on load
+    // Scroll to top on load and update SEO tags
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [id]);
+        if (module) {
+            document.title = `${module.title} | Den digitale dråpen`;
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.content = module.shortDescription;
+            }
+        }
+    }, [id, module]);
 
     if (!module) {
         return (
@@ -72,11 +81,26 @@ const ModuleDetailPage = () => {
         : mockData.filter(m => m.id !== module.id).slice(0, 3);
 
     return (
-        <div className="w-full max-w-5xl mx-auto pb-12 relative z-10">
-            <Link to="/" className="inline-flex items-center text-[#0056a4] hover:text-blue-800 font-medium mb-6 transition-colors bg-white/50 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-blue-50">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Tilbake til oversikten
-            </Link>
+        <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="w-full max-w-5xl mx-auto pb-12 relative z-10"
+        >
+            <div className="flex justify-between items-center mb-6">
+                <Link to="/" className="inline-flex items-center text-[#0056a4] hover:text-blue-800 font-medium transition-colors bg-white/50 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-blue-50">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Tilbake til oversikten
+                </Link>
+                <button
+                    onClick={() => toggleBookmark(module.id)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-colors duration-300 shadow-sm border ${isBookmarked ? 'bg-red-50 text-red-500 border-red-100' : 'bg-white text-gray-600 border-gray-100 hover:text-red-500 hover:bg-red-50/50 hover:border-red-100'}`}
+                >
+                    <Heart className="w-4 h-4" fill={isBookmarked ? "currentColor" : "none"} />
+                    {isBookmarked ? "Lagt til i favoritter" : "Lagre som favoritt"}
+                </button>
+            </div>
 
             <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-sm border border-blue-100 overflow-hidden mb-12 relative">
                 <div className="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none bg-[url('/Dig.ferdigheter-nettside/draape.png')] bg-no-repeat bg-contain z-0 -mt-10 -mr-10"></div>
@@ -115,7 +139,7 @@ const ModuleDetailPage = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

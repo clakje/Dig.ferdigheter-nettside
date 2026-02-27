@@ -1,14 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Heart } from 'lucide-react';
 
-const ModuleCard = ({ module }) => {
+const ModuleCard = ({ module, isBookmarked, toggleBookmark }) => {
     return (
         <Link to={`/module/${module.id}`} className="block group">
             <div
                 className="group/card relative bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-[#0056a4] focus:ring-offset-2"
                 aria-label={`Gå til modul: ${module.title}`}
             >
+                <button
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleBookmark(module.id);
+                    }}
+                    className={`absolute top-4 right-4 z-20 p-2 rounded-full transition-colors duration-300 ${isBookmarked ? 'bg-red-50 text-red-500' : 'bg-white/50 text-gray-400 hover:text-red-500 hover:bg-white'}`}
+                    aria-label={isBookmarked ? "Fjern fra favoritter" : "Legg til i favoritter"}
+                >
+                    <Heart className="w-5 h-5" fill={isBookmarked ? "currentColor" : "none"} />
+                </button>
                 <div className="h-40 bg-gradient-to-br from-[#e6f0f9] to-[#cbe5fa] flex items-center justify-center p-6 relative overflow-hidden group-hover/card:animate-[float_3s_ease-in-out_infinite]">
                     <div className="absolute inset-0 opacity-10 bg-[url('/Dig.ferdigheter-nettside/draape.png')] bg-cover bg-center mix-blend-multiply"></div>
                     <div className="w-20 h-20 bg-gradient-to-br from-[#3fa3f2] to-[#0056a4] drop-shape flex items-center justify-center shadow-inner relative z-10 transition-transform duration-500 scale-100 group-hover/card:scale-110">
