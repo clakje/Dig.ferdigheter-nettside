@@ -1,7 +1,41 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, BookOpen } from 'lucide-react';
+import {
+    ArrowLeft, BookOpen, LayoutGrid, Key, User,
+    Pin, Settings, Plus, Search, Power, Accessibility
+} from 'lucide-react';
 import mockData from '../data/mockData.json';
+
+const iconMap = {
+    'WindowsLogo': LayoutGrid,
+    'Key': Key,
+    'User': User,
+    'Pin': Pin,
+    'Settings': Settings,
+    'Add': Plus,
+    'Search': Search,
+    'PowerButton': Power,
+    'EaseOfAccess': Accessibility,
+};
+
+const renderContentWithIcons = (text) => {
+    // Split the text by the [Ikon: ...] pattern
+    const parts = text.split(/(\[Ikon:\s*[a-zA-Z]+\])/g);
+
+    return parts.map((part, index) => {
+        const match = part.match(/\[Ikon:\s*([a-zA-Z]+)\]/);
+        if (match) {
+            const iconName = match[1];
+            const IconComponent = iconMap[iconName] || BookOpen; // Fallback to BookOpen
+            return (
+                <span key={index} className="inline-flex items-center justify-center mx-1 align-sub text-[#0056a4] bg-[#e6f0f9] p-1 rounded-md">
+                    <IconComponent className="w-5 h-5" />
+                </span>
+            );
+        }
+        return <React.Fragment key={index}>{part}</React.Fragment>;
+    });
+};
 
 const ModuleDetailPage = () => {
     const { id } = useParams();
@@ -38,27 +72,30 @@ const ModuleDetailPage = () => {
         : mockData.filter(m => m.id !== module.id).slice(0, 3);
 
     return (
-        <div className="w-full max-w-5xl mx-auto pb-12">
-            <Link to="/" className="inline-flex items-center text-[#0056a4] hover:text-blue-800 font-medium mb-6 transition-colors">
+        <div className="w-full max-w-5xl mx-auto pb-12 relative z-10">
+            <Link to="/" className="inline-flex items-center text-[#0056a4] hover:text-blue-800 font-medium mb-6 transition-colors bg-white/50 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-blue-50">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Tilbake til oversikten
             </Link>
 
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-12">
-                <div className="bg-[#e6f0f9] px-8 py-10 flex flex-col md:flex-row items-start md:items-center justify-between border-b-4 border-[#0056a4]">
+            <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-sm border border-blue-100 overflow-hidden mb-12 relative">
+                <div className="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none bg-[url('/Dig.ferdigheter-nettside/draape.png')] bg-no-repeat bg-contain z-0 -mt-10 -mr-10"></div>
+
+                <div className="bg-gradient-to-r from-[#e6f0f9] to-[#f4f8fc] px-8 py-10 flex flex-col md:flex-row items-start md:items-center justify-between border-b-[3px] border-[#3fa3f2]/50 relative z-10">
                     <div className="flex-1">
-                        <h1 className="text-3xl font-extrabold text-[#0056a4] mb-4">{module.title}</h1>
-                        <p className="text-lg text-gray-700 font-medium max-w-2xl">{module.shortDescription}</p>
+                        <h1 className="text-3xl font-extrabold bg-gradient-to-r from-[#0056a4] to-[#3fa3f2] bg-clip-text text-transparent mb-4">{module.title}</h1>
+                        <p className="text-xl text-gray-700 font-medium max-w-2xl leading-relaxed">{module.shortDescription}</p>
                     </div>
-                    <div className="hidden md:flex ml-8 bg-white p-4 rounded-full shadow-sm">
-                        <BookOpen className="w-16 h-16 text-[#0056a4]" />
+                    <div className="hidden md:flex ml-8 drop-shape bg-gradient-to-br from-[#3fa3f2] to-[#0056a4] w-24 h-24 items-center justify-center shadow-inner shrink-0">
+                        <div className="drop-content-fix text-white">
+                            <BookOpen className="w-10 h-10" />
+                        </div>
                     </div>
                 </div>
 
-                <div className="p-8 md:p-12 prose prose-lg prose-blue max-w-none text-gray-800">
-                    {/* Format the full content using basic whitespace rules if HTML tags aren't present */}
-                    <div className="whitespace-pre-wrap leading-relaxed">
-                        {module.fullContent}
+                <div className="p-8 md:p-12 prose prose-lg prose-blue max-w-none text-gray-800 relative z-10">
+                    <div className="whitespace-pre-wrap leading-relaxed space-y-4">
+                        {renderContentWithIcons(module.fullContent)}
                     </div>
                 </div>
             </div>
