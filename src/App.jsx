@@ -8,9 +8,9 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <div className="min-h-screen flex flex-col items-center w-full">
+    <div className="min-h-screen flex flex-col items-center w-full bg-gradient-to-b from-[#f4f8fc] to-[#e1effa]">
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <main className="flex-grow w-full max-w-7xl px-4 py-8">
+      <main className="flex-grow w-full max-w-7xl px-4 py-12 relative z-10">
         <Routes>
           <Route path="/" element={<LandingPage searchQuery={searchQuery} />} />
           <Route path="/module/:id" element={<ModuleDetailPage />} />

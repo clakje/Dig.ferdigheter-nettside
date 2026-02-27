@@ -6,11 +6,16 @@ const ModuleCard = ({ module }) => {
     return (
         <Link to={`/module/${module.id}`} className="block group">
             <div
-                className="relative bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#0056a4] focus:ring-offset-2"
+                className="group/card relative bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-[#0056a4] focus:ring-offset-2"
                 aria-label={`Gå til modul: ${module.title}`}
             >
-                <div className="h-32 bg-[#e6f0f9] flex items-center justify-center p-6">
-                    <BookOpen className="w-12 h-12 text-[#0056a4]" />
+                <div className="h-40 bg-gradient-to-br from-[#e6f0f9] to-[#cbe5fa] flex items-center justify-center p-6 relative overflow-hidden group-hover/card:animate-[float_3s_ease-in-out_infinite]">
+                    <div className="absolute inset-0 opacity-10 bg-[url('/Dig.ferdigheter-nettside/draape.png')] bg-cover bg-center mix-blend-multiply"></div>
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#3fa3f2] to-[#0056a4] drop-shape flex items-center justify-center shadow-inner relative z-10 transition-transform duration-500 scale-100 group-hover/card:scale-110">
+                        <div className="drop-content-fix text-white">
+                            <BookOpen className="w-8 h-8" />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="p-5">

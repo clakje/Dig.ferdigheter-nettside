@@ -7,13 +7,10 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         <header className="w-full bg-white shadow-md border-b-4 border-[#0056a4] sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-3">
-                    {/* Logo Placeholder */}
-                    <div className="w-12 h-12 bg-[#0056a4] rounded-full flex items-center justify-center text-white font-bold text-xl">
-                        HSØ
-                    </div>
+                    <img src="/Dig.ferdigheter-nettside/draape.png" alt="Den digitale dråpen logo" className="w-12 h-12 object-contain" />
                     <div className="hidden sm:block">
-                        <h1 className="text-xl font-bold text-[#0056a4] leading-tight">Helse Sør-Øst</h1>
-                        <p className="text-sm text-gray-500 font-medium">Nano-learning Portal</p>
+                        <h1 className="text-2xl font-extrabold bg-gradient-to-r from-[#0056a4] to-[#3fa3f2] bg-clip-text text-transparent leading-tight tracking-tight">Den digitale dråpen</h1>
+                        <p className="text-sm text-[#0056a4] font-medium opacity-80">Helse Sør-Øst Læringsportal</p>
                     </div>
                 </Link>
 

@@ -12,13 +12,15 @@ const LandingPage = ({ searchQuery }) => {
     });
 
     return (
-        <div className="w-full">
-            <div className="mb-10 mt-6 text-center max-w-3xl mx-auto">
-                <h2 className="text-3xl font-extrabold text-[#0056a4] tracking-tight sm:text-4xl mb-4">
-                    Velkommen til din læringsportal
+        <div className="w-full relative">
+            <div className="absolute top-0 right-0 w-96 h-96 opacity-5 pointer-events-none bg-[url('/Dig.ferdigheter-nettside/draape.png')] bg-no-repeat bg-contain z-0 mt-20"></div>
+
+            <div className="mb-12 mt-8 text-center max-w-3xl mx-auto relative z-10">
+                <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#0056a4] to-[#3fa3f2] bg-clip-text text-transparent tracking-tight mb-4">
+                    Mange bekker små...
                 </h2>
-                <p className="text-lg text-gray-600">
-                    Finn og gjennomfør korte, praktiske moduler for å styrke din digitale kompetanse i hverdagen.
+                <p className="text-xl text-gray-600">
+                    Hver dråpe av kunnskap bygger din digitale kompetanse. Finn dine moduler under.
                 </p>
             </div>
 

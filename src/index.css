@@ -5,6 +5,25 @@
   --color-hso-light: #e6f0f9;
   --color-hso-gray: #f4f4f4;
   --color-hso-dark: #333333;
+  --color-drop-light: #76c0f3;
+  --color-drop-mid: #3fa3f2;
+  --color-drop-dark: #1f85d6;
+
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 body {
@@ -12,4 +31,13 @@ body {
   font-family: Arial, "Open Sans", sans-serif;
   background-color: var(--color-hso-gray);
   color: var(--color-hso-dark);
+}
+
+.drop-shape {
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.drop-content-fix>* {
+  transform: rotate(45deg);
 }
