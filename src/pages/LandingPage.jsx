@@ -49,9 +49,16 @@ const LandingPage = ({ searchQuery, bookmarks, toggleBookmark }) => {
                 <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#0056a4] to-[#3fa3f2] bg-clip-text text-transparent tracking-tight mb-4">
                     Mange bekker små...
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-gray-600 mb-6">
                     Hver dråpe av kunnskap bygger din digitale kompetanse. Finn dine moduler under.
                 </p>
+                <div className="bg-[#e6f0f9]/80 backdrop-blur-sm p-5 rounded-2xl shadow-sm border border-blue-100 max-w-2xl mx-auto">
+                    <p className="text-[1.05rem] text-[#004280] font-medium leading-relaxed">
+                        Visste du at grunnleggende digitale ferdigheter sparer deg for verdifull tid hver eneste dag?
+                        Ved å mestre de smarte, små grepene får du en smidigere arbeidsflyt, mindre frustrasjon,
+                        og mer rom til de oppgavene som faktisk betyr noe.
+                    </p>
+                </div>
             </div>
 
             {/* Tag and Filter Navigation */}
